@@ -1,0 +1,52 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    color: white;
+    border-bottom: 1px solid white;
+
+    & .logo {
+        display: flex;
+        gap: 15px;
+
+        & img {
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid green;
+        }
+
+        & .logo_name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & p {
+                margin: 0;
+                font-size: 15px;
+                font-weight: 400;
+            }
+
+            & .name {
+                font-weight: 400;
+                font-size: 18px;
+            }
+        }
+    }
+
+    & nav ul {
+        display: flex;
+        list-style-type: none;
+        gap: 30px;
+
+        & button {
+            text-decoration: none;
+            border: none;
+            font-weight: 400;
+            background-color: transparent;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}

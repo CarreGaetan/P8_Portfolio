@@ -1,0 +1,110 @@
+.contact_bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2f2f2f;
+
+    & .title {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        padding: 20px 100px;
+        background-color: #333;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        width: 620px;
+        text-align: center;
+
+        & h3 {
+            font-size: 36px;
+            margin: 0;
+            color: white;
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    background-color: #222222;
+    justify-content: space-around;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0px 2px 2px 0 black;
+    max-width: 1280px;  // Limite la largeur écran
+    width: 100%;        // S'adapte à des écrans plus petits
+    padding: 80px 0;      // Ajoute un espacement pour ne pas coller au bord
+    box-sizing: border-box;  // Inclut le padding dans max-width
+    margin: 200px 0;
+
+    & h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    width: 33%;
+    gap: 20px;
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        & li {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        & img {
+            height: 40px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+        }
+    }
+}
+
+.contact_message {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    text-align: left;
+    gap: 20px;
+    font-size: 18px;
+
+    & button {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & input {
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    & textarea {
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 5px;
+        border: none;
+    }
+}

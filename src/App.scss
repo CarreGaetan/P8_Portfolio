@@ -1,0 +1,40 @@
+.App {
+    background-color: #222222;
+    min-height: 100vh; // Assure que le fond couvre toute la hauteur de la page
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Style général pour la scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Largeur de la barre */
+}
+
+/* Couleur de fond de la scrollbar */
+::-webkit-scrollbar-track {
+  background: #2f2f2f; /* Couleur de fond */
+}
+
+/* Couleur et style de la poignée (le "thumb") */
+::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9; /* Couleur de la poignée */
+  border-radius: 10px; /* Arrondi de la poignée */
+  border: 2px solid #2f2f2f; /* Bordure autour de la poignée */
+}
+
+/* Style au survol de la poignée */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a6a6a6;
+}
+
+// .Main {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 150px;
+//     max-width: 1280px;  // Limite la largeur pour une meilleure lisibilité sur grand écran
+//     width: 100%;        // S'adapte à des écrans plus petits
+//     margin: 0 auto;     // Centre le contenu horizontalement
+//     // padding: 20px 0;      // Ajoute un espacement pour ne pas coller au bord
+//     box-sizing: border-box;  // Inclut le padding dans max-width
+// }
+  
