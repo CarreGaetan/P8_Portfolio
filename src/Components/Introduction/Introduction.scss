@@ -43,13 +43,20 @@
     }
 
     & .intro_img {
+        display: flex;
+        justify-content: center;
         border: 1px solid white;
-        border-radius: 50%;
-        box-shadow: 0px 4px 4px 0px white;
+        border-radius: 5px;
+        box-shadow: 0px 2px 2px 0px rgb(0, 0, 0);
+        background-color: #222222;
         margin: 0 20px 0 0;
+        width: 500px;
+        height: 450px;
 
         & img {
-            height: 450px;
+            height: 100%;
+            width: 450px;
+            object-fit: cover;
         }
     }
 }

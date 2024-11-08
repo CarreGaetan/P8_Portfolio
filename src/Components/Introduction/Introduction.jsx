@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import "./Introduction.scss";
-import photo from "../../Assets/photoGaetan/Photo gaetan TRANSPARENT.png";
+import photo from "../../Assets/photoGaetan/photoIntro.png";
 
 function Introduction() {
     const vantaRef = useRef(null);
