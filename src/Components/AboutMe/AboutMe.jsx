@@ -83,7 +83,7 @@ function AboutMe() {
                             >
                                 Mon parcours
                             </p>
-                            <p className="link">Mon github</p>
+                            <button className="link">Mon github</button>
                         </div>
                         <div className="list">
                             <p
@@ -134,7 +134,11 @@ function AboutMe() {
                             >
                                 Mon ambition
                             </p>
-                            <p className="link">Télécharger mon CV</p>
+                            <button className="link">
+                                <a className="button" href="/cv_carre_gaetan.pdf" download="CV_Carre_Gaetan.pdf">
+                                    Télécharger le CV
+                                </a>
+                            </button>
                         </div>
                     </div>
                 </div>

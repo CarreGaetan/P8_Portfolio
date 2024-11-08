@@ -13,11 +13,11 @@ function Projects() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const projectsData = [
-        { name: 'Booki', image: booki, stacks: ['HTML', 'CSS'] },
-        { name: 'Sophie Bluel', image: sophieBluel, stacks: ['Javascript'] },
-        { name: 'Nina Carducci', image: ninaCarducci, stacks: ['SEO'] },
-        { name: 'Kasa', image: kasa, stacks: ["REACT", "SCSS"] },
-        { name: 'Mon vieux grimoire', image: monVieuxGrimoire, stacks: ['NODE'] }
+        { name: 'Booki', image: booki, stacks: ['HTML', 'CSS'], url: 'https://carregaetan.github.io/P2_Booki/', description: "Lors de ce projet, j'avais pour mission d'intégrer l'interface responsive du site Booki. Pour le réaliser, j'avais à disposition les maquettes Figma pour mobile, tablette et desktop, ainsi que les images et une note de synthèse sur les spécificités du projet." },
+        { name: 'Sophie Bluel', image: sophieBluel, stacks: ['Javascript'], url: 'https://carregaetan.github.io/P3_Sophie_Bluel/', description: "Ma mission sur ce projet était de créer une page web dynamique pour le site internet d'une architecte en utilisant JavaScript et en communiquant avec une API. Je devais récupérer les informations d'un backend, recréer la galerie et mettre en place un CRUD." },
+        { name: 'Nina Carducci', image: ninaCarducci, stacks: ['SEO'], url: 'https://carregaetan.github.io/P4_Nina_Carducci/', description: "Ici, j'avais pour mission d'optimiser le référencement d’un site, en améliorant sa performance et son accessibilité en faisant un audit avec Lighthouse, puis en optimisant les ressources du site." },
+        { name: 'Kasa', image: kasa, stacks: ["REACT", "SCSS"], url: 'https://carregaetan.github.io/P5_kasa/', description: "Pour ce projet, j'avais pour mission d'implémenter le front-end d’une application en utilisant React et React Router pour créer une expérience utilisateur moderne et réactive." },
+        { name: 'Mon vieux grimoire', image: monVieuxGrimoire, stacks: ['NODE'], url: 'https://carregaetan.github.io/P6_monVieuxGrimoire/', description: "Pour ce site, j'avais pour mission de développer le back-end d'un site de notation de livres, en créant une base de données et en configurant les routes API, l'authentification ainsi le téléchargement de fichiers." }
     ];
 
     const goToPrevious = () => {
@@ -60,16 +60,17 @@ function Projects() {
                     {/* Conteneur de carrousel */}
                     <div className="carousel_container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                         {projectsData.map((project, index) => (
-                            <div className="project_item" key={index}>
+                            <div className="project_item" key={index} >
                                 <h3>{project.name}</h3>
-                                <img src={project.image} alt={`Projet ${project.name}`} />
+                                <img onClick={() => window.open(project.url, '_blank')} src={project.image} alt={`Projet ${project.name}`} />
                                 <div className="tags">
                                 {project.stacks.map((stack, idx) => (
                                     <p key={idx} className={`${stack.toLowerCase()}_${viewMode}`}>
                                         {stack}
                                     </p>
                                 ))}
-                            </div>
+                                </div>
+                                <div className='description'>{project.description}</div>
                             </div>
                         ))}
                     </div>
@@ -82,7 +83,7 @@ function Projects() {
                     {projectsData.map((project, index) => (
                         <div className="project_item" key={index}>
                             <h3>{project.name}</h3>
-                            <img src={project.image} alt={`Projet ${project.name}`} />
+                            <img onClick={() => window.open(project.url, '_blank')} src={project.image} alt={`Projet ${project.name}`} />
                             <div className="tags">
                                 {project.stacks.map((stack, idx) => (
                                     <p key={idx} className={`${stack.toLowerCase()}_${viewMode}`}>

@@ -37,7 +37,8 @@ function App() {
       <section ref={contactRef}>
         <Contact />
       </section>
-      <Footer />
+      <Footer scrollToSection={scrollToSection} 
+        refs={{ aboutMeRef, projectsRef, contactRef }} />
     </div>
   );
 }

@@ -1,22 +1,27 @@
 .stacks {
     position: absolute; /* Permet de positionner la barre de manière flexible */
-    top: 100%; /* Positionne l'élément en bas de la section précédente */
-    transform: translateY(-50%); /* Fait chevaucher `stacks` entre les deux composants */
-    z-index: 2; /* Assure qu'il est au-dessus du fond Vanta */
+    // top: 100%; /* Positionne l'élément en bas de la section précédente */
+    // transform: translateY(-50%); /* Fait chevaucher `stacks` entre les deux composants */
+    // z-index: 2; /* Assure qu'il est au-dessus du fond Vanta */
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px 100px;
     gap: 80px;
     background-color: #333; /* Ajuste la couleur de fond selon tes besoins */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute un effet d'ombre */
-    width: fit-content;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-left: auto;
-    margin-right: auto;
+    box-sizing: border-box;
+    width: 840px;
+    height: 120px;
 
     & img {
         height: 60px;
+    }
+
+    & img:hover {
+        height: 62px;
     }
 }

@@ -34,7 +34,6 @@ function Introduction() {
                     <h1>GAËTAN CARRÉ</h1>
                     <h2>Développeur full stack</h2>
                     <p>Bienvenue sur mon portfolio ! Ici, découvrez mon parcours, mes projets et ma passion pour le développement web, de la conception au déploiement.</p>
-                    <button>Bouton</button>
                 </div>
                 <div className="intro_img">
                     <img src={photo} alt="" />
