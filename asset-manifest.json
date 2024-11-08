@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/P8_Portfolio/static/css/main.f7a3da9d.css",
-    "main.js": "/P8_Portfolio/static/js/main.02a9e946.js",
+    "main.css": "/P8_Portfolio/static/css/main.a7103187.css",
+    "main.js": "/P8_Portfolio/static/js/main.a83c2596.js",
     "static/js/453.e6451621.chunk.js": "/P8_Portfolio/static/js/453.e6451621.chunk.js",
+    "static/media/photoIntro.png": "/P8_Portfolio/static/media/photoIntro.2f7b18601086b01d2c06.png",
     "static/media/ninaCarducci.png": "/P8_Portfolio/static/media/ninaCarducci.34d805340545caf0759f.png",
     "static/media/kasa.png": "/P8_Portfolio/static/media/kasa.98daf56fdaac4c863f5c.png",
     "static/media/sophieBluel.png": "/P8_Portfolio/static/media/sophieBluel.b9bced78a36b5d1b71a0.png",
@@ -10,7 +11,6 @@
     "static/media/bookiDetailsScreen.png": "/P8_Portfolio/static/media/bookiDetailsScreen.ce3efce1288424f20329.png",
     "static/media/monVieuxGrimoire.png": "/P8_Portfolio/static/media/monVieuxGrimoire.94bc57ac5fd37402513f.png",
     "static/media/image.png": "/P8_Portfolio/static/media/image.e48a8b1b5ac95fc75dd7.png",
-    "static/media/Photo gaetan TRANSPARENT.png": "/P8_Portfolio/static/media/Photo gaetan TRANSPARENT.db094fd426fc1a76c8af.png",
     "static/media/iconLinkdin.png": "/P8_Portfolio/static/media/iconLinkdin.5a8c8bf86f336ccd3a56.png",
     "static/media/iconSass.png": "/P8_Portfolio/static/media/iconSass.390ecaf00d43a5841126.png",
     "static/media/iconReact.png": "/P8_Portfolio/static/media/iconReact.3b5049ea7908e9da3ba0.png",
@@ -18,12 +18,12 @@
     "static/media/iconCss.png": "/P8_Portfolio/static/media/iconCss.2ab79bf023a87655a988.png",
     "static/media/iconHtml.png": "/P8_Portfolio/static/media/iconHtml.354f15bf8d57659dc87c.png",
     "index.html": "/P8_Portfolio/index.html",
-    "main.f7a3da9d.css.map": "/P8_Portfolio/static/css/main.f7a3da9d.css.map",
-    "main.02a9e946.js.map": "/P8_Portfolio/static/js/main.02a9e946.js.map",
+    "main.a7103187.css.map": "/P8_Portfolio/static/css/main.a7103187.css.map",
+    "main.a83c2596.js.map": "/P8_Portfolio/static/js/main.a83c2596.js.map",
     "453.e6451621.chunk.js.map": "/P8_Portfolio/static/js/453.e6451621.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7a3da9d.css",
-    "static/js/main.02a9e946.js"
+    "static/css/main.a7103187.css",
+    "static/js/main.a83c2596.js"
   ]
 }
