@@ -194,11 +194,57 @@
         & .react_grid, & .node_grid,
         & .scss_grid, & .javascript_grid, & .seo_grid  {
             width: auto;
-            padding: 5px 15px;
+            padding: 3px 10px;
             margin: 5px;
-            font-size: 14px;
+            font-size: 12px;
+            width: 50px;
             font-weight: 500;
             border-radius: 5px;
+            box-shadow: 0px 2px 2px 0 black;
+        }
+
+        & .html_carrousel {
+            background-color: #E44D26;
+        }
+        & .css_carrousel {
+            background-color: #1F62AE;
+        }
+        & .react_carrousel {
+            background-color: #00D8FF;
+        }
+        & .node_carrousel {
+            background-color: #539E43;
+        }
+        & .scss_carrousel {
+            background-color: #CF649A;
+        }
+        & .javascript_carrousel {
+            background-color: #8f43f1;
+            width: fit-content;
+        }
+        & .seo_carrousel {
+            background-color: #2f2f2f;
+        }
+        & .html_grid {
+            background-color:  #E44D26;
+        }
+        & .css_grid {
+            background-color: #1F62AE;
+        }
+        & .react_grid {
+            background-color: #00D8FF;
+        }
+        & .node_grid {
+            background-color: #539E43;
+        }
+        & .scss_grid {
+            background-color: #CF649A;
+        }
+        & .javascript_grid {
+            background-color: #8f43f1;
+        }
+        & .seo_grid {
+            background-color: #222222;
         }
     }
 
