@@ -109,7 +109,7 @@ function AboutMe() {
                                         <div className="hover-text-item">
                                             <p>Actuellement :</p>
                                             <ul>
-                                                <li>Développement d'un site de productivité</li>
+                                                <li>Développement d'un site <br/> de productivité</li>
                                             </ul>
                                         </div>
                                     )
