@@ -1,27 +1,48 @@
 .stacks {
-    position: absolute; /* Permet de positionner la barre de manière flexible */
-    // top: 100%; /* Positionne l'élément en bas de la section précédente */
-    // transform: translateY(-50%); /* Fait chevaucher `stacks` entre les deux composants */
-    // z-index: 2; /* Assure qu'il est au-dessus du fond Vanta */
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 100px;
-    gap: 80px;
-    background-color: #333; /* Ajuste la couleur de fond selon tes besoins */
+    padding: 20px 50px;
+    gap: 40px;
+    background-color: #333;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute un effet d'ombre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     left: 50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    width: 840px;
-    height: 120px;
+    max-width: 840px;
+    width: 100%;
+    height: auto;
 
     & img {
         height: 60px;
+        transition: height 0.3s ease;
     }
 
     & img:hover {
         height: 62px;
+    }
+
+    // Pour les écrans de taille moyenne (tablettes)
+    @media (max-width: 1024px) {
+        padding: 15px 30px;
+        max-width: 500px;
+        gap: 30px;
+
+        & img {
+            height: 50px;
+        }
+    }
+
+    // Pour les petits écrans (mobiles)
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+        padding: 10px 20px;
+        max-width: 250px;
+        gap: 20px;
+
+        & img {
+            height: 25px;
+        }
     }
 }

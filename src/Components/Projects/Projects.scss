@@ -11,16 +11,18 @@
 
     & .projects_title {
         position: absolute;
+        justify-content: center;
         display: flex;
-        flex-direction: column;
         transform: translate(-50%, -50%);
         left: 50%;
         padding: 20px 100px;
+        box-sizing: border-box;
         background-color: #333;
         border-radius: 8px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        width: 620px;
         text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 620px;
+        width: 100%;
 
         & h2 {
             font-size: 36px;
@@ -70,7 +72,7 @@
             background-color: #222222;
             border-radius: 8px;
             position: relative;
-            overflow: hidden; // Masquer les éléments décalés hors du conteneur visible
+            overflow: hidden;
 
             & .carousel_container {
                 display: flex;
@@ -79,27 +81,26 @@
             }
 
             & .project_item {
-                min-width: 100%; // Assure que chaque élément prend toute la largeur du conteneur
+                min-width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
                 gap: 30px;
                 z-index: 2;
-                
+
                 & h3 {
                     font-size: 28px;
                     margin: 0;
                     font-weight: 400;
                 }
-                
+
                 & img {
                     height: 390px;
                     width: 765px;
                     border-radius: 8px;
                     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
                     object-fit: cover;
-                    flex-shrink: 0;
                     cursor: pointer;
                 }
 
@@ -132,17 +133,17 @@
             }
 
             & .previous {
-                left: 100px;
+                left: 20px;
             }
 
             & .next {
-                right: 100px;
+                right: 20px;
             }
         }
 
         &.grid-mode {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             justify-items: center;
             padding: 20px;
@@ -178,7 +179,7 @@
 
         & .html_carrousel, & .css_carrousel,
         & .react_carrousel, & .node_carrousel,
-        & .scss_carrousel,  & .javascript_carrousel,
+        & .scss_carrousel, & .javascript_carrousel,
         & .seo_carrousel {
             width: 50px;
             padding: 3px 10px;
@@ -187,7 +188,6 @@
             box-shadow: 0px 2px 2px 0 black;
             border-radius: 5px;
             margin: 0;
-
         }
 
         & .html_grid, & .css_grid,
@@ -198,64 +198,119 @@
             margin: 5px;
             font-size: 14px;
             font-weight: 500;
-            box-shadow: none;
             border-radius: 5px;
-            margin: 0;
-        }
-
-        & .html_carrousel {
-            background-color: #E44D26;
-        }
-
-        & .css_carrousel {
-            background-color: #1F62AE;
-        }
-
-        & .react_carrousel {
-            background-color: #00D8FF;
-        }
-
-        & .node_carrousel {
-            background-color: #539E43;
-        }
-
-        & .scss_carrousel {
-            background-color: #CF649A;
-        }
-
-        & .javascript_carrousel {
-            background-color: #8f43f1;
-            width: fit-content;
-        }
-        & .seo_carrousel {
-            background-color: #2f2f2f;
-        }
-
-        & .html_grid {
-            background-color:  #E44D26;
-        }
-
-        & .css_grid {
-            background-color: #1F62AE;
-        }
-
-        & .react_grid {
-            background-color: #00D8FF;
-        }
-
-        & .node_grid {
-            background-color: #539E43;
-        }
-
-        & .scss_grid {
-            background-color: #CF649A;
-        }
-
-        & .javascript_grid {
-            background-color: #8f43f1;
-        }
-        & .seo_grid {
-            background-color: #222222;
         }
     }
+
+}
+/* Media Queries */
+@media (max-width: 1024px) {
+
+    .projects {
+        padding: 0 20px;
+        margin: 0 0 70px 0;
+
+        & .project.carrousel-mode {
+            & .carousel_container{
+                width: 120%;
+            }
+        }
+
+        & .projects_view {
+            width: auto;
+            padding: 60px 20px 0 20px;
+
+            & .view-button {
+                padding: 10px;
+            }
+        }
+    
+        & .projects_title {
+            max-width: 500px;
+            padding: 10px 0;
+            
+            & h2 {
+                font-size: 28px;
+            }
+        }
+    }
+
+    .carousel_container {
+        width: 100%;
+    }
+}
+
+.projects .project.grid-mode .project_item img {
+    object-fit: cover;
+}
+
+@media screen and (min-width:320px) and (max-width: 768px) {
+
+    .projects {
+        padding: 0 20px 60px 20px;
+        margin: 0 0 40px 0;
+        gap: 20px;
+
+        
+        & .project.carrousel-mode {
+
+            & .next, .previous {
+                top: 150px;
+                height: 40px;
+                width: 40px;
+
+                & img {
+                    height: 15px;
+                }
+            }
+
+            & .carousel_container{
+                width: 240%;
+                
+                & .project_item {
+                    gap: 20px;
+
+                    & .description {
+                        max-width: 280px;
+                        box-sizing: border-box;
+                    }
+                }
+
+                & h3 {
+                    font-size: 20px;
+                }
+            }
+
+            & img {
+                max-width: 320px;
+                max-height: fit-content;
+            }
+
+        }
+
+        & .projects_title {
+            width: 90%;
+
+            & h2 {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .project_item h3 {
+        font-size: 20px;
+    }
+
+    .tags p {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+.projects .project.grid-mode {
+    padding: 0;
+}
+
+.projects .project.grid-mode .project_item img {
+    height: 200px;
 }

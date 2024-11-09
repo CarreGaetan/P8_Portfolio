@@ -21,7 +21,7 @@ function Contact() {
     return (
         <div className='contact_bg'>
             <div className='title'>
-                <h3>Me contacter</h3>
+                <h2>Me contacter</h2>
             </div>
             <div className="contact">
                 <div className="infos">

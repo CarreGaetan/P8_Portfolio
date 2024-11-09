@@ -3,26 +3,25 @@ import "./AboutMe.scss";
 import photo from "../../Assets/photoGaetan/photoAboutMe.png";
 
 function AboutMe() {
-    const [hoverText, setHoverText] = useState("");
+    const [hoverText, setHoverText] = useState(null);
 
-    const handleMouseEnter = (text) => {
-        setHoverText(text);
+    const handleMouseEnter = (content) => {
+        setHoverText(content);
     };
 
     const handleMouseLeave = () => {
-        setHoverText("");
+        setHoverText(null);
     };
 
     return (
         <div className="bg">
             <div className="aboutMe">
                 <div className="aboutMe_img">
-                    <img src={photo} alt="" className={hoverText ? "hidden" : ""} />
-                    <div
-                    className="hover-text visible"
-                    dangerouslySetInnerHTML={{ __html: hoverText }}
-                />
-
+                    {hoverText ? (
+                        <div className="hover-text">{hoverText}</div>
+                    ) : (
+                        <img src={photo} alt="Gaëtan Carré" />
+                    )}
                 </div>
                 <div className="aboutMe_text">
                     <h2>A propos de moi</h2>
@@ -30,8 +29,8 @@ function AboutMe() {
                         <div className="list">
                             <p
                                 onMouseEnter={() =>
-                                    handleMouseEnter(`
-                                        <div>
+                                    handleMouseEnter(
+                                        <div className="hover-text-item">
                                             <p>Qui suis-je ?</p>
                                             <ul>
                                                 <li>Carré Gaëtan</li>
@@ -39,16 +38,16 @@ function AboutMe() {
                                                 <li>Palavas les flots</li>
                                             </ul>
                                         </div>
-                                    `)
+                                    )
                                 }
                                 onMouseLeave={handleMouseLeave}
                             >
-                                Qui suis je ?
+                                Qui suis-je ?
                             </p>
                             <p
                                 onMouseEnter={() =>
-                                    handleMouseEnter(`
-                                        <div>
+                                    handleMouseEnter(
+                                        <div className="hover-text-item">
                                             <p>Développeur web (RNCP 5)</p>
                                             <ul>
                                                 <li>HTML & CSS</li>
@@ -58,7 +57,7 @@ function AboutMe() {
                                                 <li>Node & MongoDB</li>
                                             </ul>
                                         </div>
-                                    `)
+                                    )
                                 }
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -66,8 +65,8 @@ function AboutMe() {
                             </p>
                             <p
                                 onMouseEnter={() =>
-                                    handleMouseEnter(`
-                                        <div>
+                                    handleMouseEnter(
+                                        <div className="hover-text-item">
                                             <p>Parcours :</p>
                                             <ul>
                                                 <li>Technicien de l'image</li>
@@ -77,19 +76,19 @@ function AboutMe() {
                                                 <li>Formation OpenClassRooms</li>
                                             </ul>
                                         </div>
-                                    `)
+                                    )
                                 }
                                 onMouseLeave={handleMouseLeave}
                             >
                                 Mon parcours
                             </p>
-                            <button className="link">Mon github</button>
+                            <button className="link">Mon GitHub</button>
                         </div>
                         <div className="list">
                             <p
                                 onMouseEnter={() =>
-                                    handleMouseEnter(`
-                                        <div>
+                                    handleMouseEnter(
+                                        <div className="hover-text-item">
                                             <p>Hobbies :</p>
                                             <ul>
                                                 <li>Développement</li>
@@ -98,7 +97,7 @@ function AboutMe() {
                                                 <li>Pop culture</li>
                                             </ul>
                                         </div>
-                                    `)
+                                    )
                                 }
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -106,29 +105,29 @@ function AboutMe() {
                             </p>
                             <p
                                 onMouseEnter={() =>
-                                    handleMouseEnter(`
-                                        <div>
+                                    handleMouseEnter(
+                                        <div className="hover-text-item">
                                             <p>Actuellement :</p>
                                             <ul>
-                                                <li>Développement d'un site <br /> de productivité</li>
+                                                <li>Développement d'un site de productivité</li>
                                             </ul>
                                         </div>
-                                    `)
+                                    )
                                 }
                                 onMouseLeave={handleMouseLeave}
                             >
-                                Mes projets personnels
+                                Projets personnels
                             </p>
                             <p
                                 onMouseEnter={() =>
-                                    handleMouseEnter(`
-                                        <div>
+                                    handleMouseEnter(
+                                        <div className="hover-text-item">
                                             <p>Ambition :</p>
                                             <ul>
                                                 <li>Devenir expert en React</li>
                                             </ul>
                                         </div>
-                                    `)
+                                    )
                                 }
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -136,7 +135,7 @@ function AboutMe() {
                             </p>
                             <button className="link">
                                 <a className="button" href="/cv_carre_gaetan.pdf" download="CV_Carre_Gaetan.pdf">
-                                    Télécharger le CV
+                                    Télécharger CV
                                 </a>
                             </button>
                         </div>

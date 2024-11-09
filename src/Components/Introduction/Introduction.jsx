@@ -13,7 +13,7 @@ function Introduction() {
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
-            minHeight: 600.0,
+            minHeight: 400.0,
             minWidth: 200.0,
             scale: 1.0,
             scaleMobile: 1.0,
