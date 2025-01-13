@@ -3,22 +3,28 @@ import "./AboutMe.scss";
 import photo from "../../Assets/photoGaetan/photoAboutMe.png";
 
 function AboutMe() {
-    const [hoverText, setHoverText] = useState(null);
+    const [selectedText, setSelectedText] = useState(null);
 
-    const handleMouseEnter = (content) => {
-        setHoverText(content);
+    const handleClick = (content) => {
+        setSelectedText(content);
     };
 
-    const handleMouseLeave = () => {
-        setHoverText(null);
+    const resetSelection = () => {
+        setSelectedText(null);
     };
 
     return (
-        <div className="bg">
-            <div className="aboutMe">
+        <div
+            className="bg"
+            onClick={resetSelection} // Reset the state when clicking on the background
+        >
+            <div
+                className="aboutMe"
+                onClick={(e) => e.stopPropagation()} // Prevent resetting when clicking inside the aboutMe section
+            >
                 <div className="aboutMe_img">
-                    {hoverText ? (
-                        <div className="hover-text">{hoverText}</div>
+                    {selectedText ? (
+                        <div className="hover-text">{selectedText}</div>
                     ) : (
                         <img src={photo} alt="Gaëtan Carré" />
                     )}
@@ -28,8 +34,9 @@ function AboutMe() {
                     <div className="listContainer">
                         <div className="list">
                             <p
-                                onMouseEnter={() =>
-                                    handleMouseEnter(
+                                onClick={(e) => {
+                                    e.stopPropagation(); // Prevent reset when clicking this element
+                                    handleClick(
                                         <div className="hover-text-item">
                                             <p>Qui suis-je ?</p>
                                             <ul>
@@ -38,15 +45,15 @@ function AboutMe() {
                                                 <li>Palavas les flots</li>
                                             </ul>
                                         </div>
-                                    )
-                                }
-                                onMouseLeave={handleMouseLeave}
+                                    );
+                                }}
                             >
                                 Qui suis-je ?
                             </p>
                             <p
-                                onMouseEnter={() =>
-                                    handleMouseEnter(
+                                onClick={(e) => {
+                                    e.stopPropagation(); // Prevent reset when clicking this element
+                                    handleClick(
                                         <div className="hover-text-item">
                                             <p>Développeur web (RNCP 5)</p>
                                             <ul>
@@ -57,15 +64,15 @@ function AboutMe() {
                                                 <li>Node & MongoDB</li>
                                             </ul>
                                         </div>
-                                    )
-                                }
-                                onMouseLeave={handleMouseLeave}
+                                    );
+                                }}
                             >
                                 OpenClassRooms
                             </p>
                             <p
-                                onMouseEnter={() =>
-                                    handleMouseEnter(
+                                onClick={(e) => {
+                                    e.stopPropagation(); // Prevent reset when clicking this element
+                                    handleClick(
                                         <div className="hover-text-item">
                                             <p>Parcours :</p>
                                             <ul>
@@ -76,18 +83,26 @@ function AboutMe() {
                                                 <li>Formation OpenClassRooms</li>
                                             </ul>
                                         </div>
-                                    )
-                                }
-                                onMouseLeave={handleMouseLeave}
+                                    );
+                                }}
                             >
                                 Mon parcours
                             </p>
-                            <button className="link">Mon GitHub</button>
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation(); // Prevent reset when clicking this element
+                                    window.open("https://github.com/CarreGaetan", "_blank");
+                                }}
+                                className="link"
+                            >
+                                Mon GitHub
+                            </button>
                         </div>
                         <div className="list">
                             <p
-                                onMouseEnter={() =>
-                                    handleMouseEnter(
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleClick(
                                         <div className="hover-text-item">
                                             <p>Hobbies :</p>
                                             <ul>
@@ -97,44 +112,48 @@ function AboutMe() {
                                                 <li>Pop culture</li>
                                             </ul>
                                         </div>
-                                    )
-                                }
-                                onMouseLeave={handleMouseLeave}
+                                    );
+                                }}
                             >
                                 Mes hobbies
                             </p>
                             <p
-                                onMouseEnter={() =>
-                                    handleMouseEnter(
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleClick(
                                         <div className="hover-text-item">
                                             <p>Actuellement :</p>
                                             <ul>
-                                                <li>Développement d'un site <br/> de productivité</li>
+                                                <li>Développement d'un site <br /> de productivité</li>
                                             </ul>
                                         </div>
-                                    )
-                                }
-                                onMouseLeave={handleMouseLeave}
+                                    );
+                                }}
                             >
                                 Projets personnels
                             </p>
                             <p
-                                onMouseEnter={() =>
-                                    handleMouseEnter(
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleClick(
                                         <div className="hover-text-item">
                                             <p>Ambition :</p>
                                             <ul>
                                                 <li>Devenir expert en React</li>
                                             </ul>
                                         </div>
-                                    )
-                                }
-                                onMouseLeave={handleMouseLeave}
+                                    );
+                                }}
                             >
                                 Mon ambition
                             </p>
                             <button className="link">
-                                <a className="button" href="/cv_carre_gaetan.pdf" download="CV_Carre_Gaetan.pdf">
+                                <a
+                                    className="button"
+                                    href=".cv_carre_gaetan.pdf"
+                                    download="CV_Carre_Gaetan.pdf"
+                                    onClick={(e) => e.stopPropagation()}
+                                >
                                     Télécharger CV
                                 </a>
                             </button>

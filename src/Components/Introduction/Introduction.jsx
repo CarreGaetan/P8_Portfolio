@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import "./Introduction.scss";
-import photo from "../../Assets/photoGaetan/photoIntro.png";
+import photo from "../../Assets/photoGaetan/photoIntro2.png";
 
 function Introduction() {
     const vantaRef = useRef(null);
@@ -18,7 +18,7 @@ function Introduction() {
             scale: 1.0,
             scaleMobile: 1.0,
             showLines: false,
-            color: 0xff3f81, // Exemple de personnalisation
+            color: 0xff3f81, 
             backgroundColor: 0x222222
         });
 
@@ -33,7 +33,7 @@ function Introduction() {
                 <div className="intro_text">
                     <h1>GAËTAN CARRÉ</h1>
                     <h2>Développeur full stack</h2>
-                    <p>Bienvenue sur mon portfolio ! Ici, découvrez mon parcours, mes projets et ma passion pour le développement web, de la conception au déploiement.</p>
+                    <p>Bienvenue sur mon portfolio ! Ici, découvrez mon parcours, mes projets et ma passion pour le développement web.</p>
                 </div>
                 <div className="intro_img">
                     <img src={photo} alt="" />

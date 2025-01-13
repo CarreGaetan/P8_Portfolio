@@ -12,7 +12,7 @@ function Contact() {
         emailjs.sendForm('service_a1zb4ro', 'template_sn0momt', e.target, 'rUozu5RAYKbrF5-lX')
           .then((result) => {
             alert('Message envoyé avec succès !');
-            e.target.reset(); // Réinitialise les champs du formulaire
+            e.target.reset();
           }, (error) => {
             alert("Erreur lors de l'envoi du message.");
           });
