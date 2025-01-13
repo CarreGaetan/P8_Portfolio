@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/P8_Portfolio/static/css/main.3c43cb1b.css",
-    "main.js": "/P8_Portfolio/static/js/main.71a4fbb5.js",
+    "main.js": "/P8_Portfolio/static/js/main.dc6a83b5.js",
     "static/js/453.e6451621.chunk.js": "/P8_Portfolio/static/js/453.e6451621.chunk.js",
-    "static/media/photoIntro.png": "/P8_Portfolio/static/media/photoIntro.2f7b18601086b01d2c06.png",
     "static/media/ninaCarducci.png": "/P8_Portfolio/static/media/ninaCarducci.34d805340545caf0759f.png",
     "static/media/kasa.png": "/P8_Portfolio/static/media/kasa.98daf56fdaac4c863f5c.png",
     "static/media/sophieBluel.png": "/P8_Portfolio/static/media/sophieBluel.b9bced78a36b5d1b71a0.png",
+    "static/media/photoIntro2.png": "/P8_Portfolio/static/media/photoIntro2.4de758d7f8f347152a4e.png",
     "static/media/photoAboutMe.png": "/P8_Portfolio/static/media/photoAboutMe.4e6e36e21a1d7bb5f04d.png",
     "static/media/bookiDetailsScreen.png": "/P8_Portfolio/static/media/bookiDetailsScreen.ce3efce1288424f20329.png",
     "static/media/monVieuxGrimoire.png": "/P8_Portfolio/static/media/monVieuxGrimoire.94bc57ac5fd37402513f.png",
@@ -19,11 +19,11 @@
     "static/media/iconHtml.png": "/P8_Portfolio/static/media/iconHtml.354f15bf8d57659dc87c.png",
     "index.html": "/P8_Portfolio/index.html",
     "main.3c43cb1b.css.map": "/P8_Portfolio/static/css/main.3c43cb1b.css.map",
-    "main.71a4fbb5.js.map": "/P8_Portfolio/static/js/main.71a4fbb5.js.map",
+    "main.dc6a83b5.js.map": "/P8_Portfolio/static/js/main.dc6a83b5.js.map",
     "453.e6451621.chunk.js.map": "/P8_Portfolio/static/js/453.e6451621.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c43cb1b.css",
-    "static/js/main.71a4fbb5.js"
+    "static/js/main.dc6a83b5.js"
   ]
 }
