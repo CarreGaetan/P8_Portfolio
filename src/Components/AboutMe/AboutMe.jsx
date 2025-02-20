@@ -150,8 +150,8 @@ function AboutMe() {
                             <button className="link">
                                 <a
                                     className="button"
-                                    href=".cv_carre_gaetan.pdf"
-                                    download="CV_Carre_Gaetan.pdf"
+                                    href="cv_carre_gaetan.pdf"
+                                    download="cv_carre_gaetan.pdf"
                                     onClick={(e) => e.stopPropagation()}
                                 >
                                     Télécharger CV
